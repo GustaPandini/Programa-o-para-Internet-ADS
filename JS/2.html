@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR" id="html-root">
+<head id="head-section">
+    <meta charset="UTF-8" id="meta-charset">
+    <title id="page-title">Tipos de Dados em JavaScript</title>
+</head>
+<body id="body-section">
+
+    <h1 id="main-title">Demonstração de Tipos e Operações</h1>
+    
+    <button id="btn-execute" onclick="executarScripts()">Executar Código</button>
+
+    <h2 id="types-title">Tipos das Variáveis:</h2>
+    <p id="pstring">String: </p>
+    <p id="pnumero">Number: </p>
+    <p id="pbooleano">Boolean: </p>
+    <p id="pindefinido">Undefined: </p>
+    <p id="pnulo">Null: </p>
+    <p id="pobjeto">Object: </p>
+    <p id="parray">Array: </p>
+
+    <h2 id="operations-title">Resultados das Operações:</h2>
+    <p id="p-op1">Operação 1: </p>
+    <p id="p-op2">Operação 2: </p>
+    <p id="p-op3">Operação 3: </p>
+    <p id="p-op4">Operação 4: </p>
+
+    <script id="main-script">
+        function executarScripts() {
+            var vString = "Olá";
+            var vNumber = 10;
+            var vBoolean = true;
+            var vUndefined;
+            var vNull = null;
+            var vObject = { nome: "João" };
+            var vArray = [1, 2, 3];
+
+            document.getElementById("pstring").innerText = "String: " + typeof vString;
+            document.getElementById("pnumero").innerText = "Number: " + typeof vNumber;
+            document.getElementById("pbooleano").innerText = "Boolean: " + typeof vBoolean;
+            document.getElementById("pindefinido").innerText = "Undefined: " + typeof vUndefined;
+            document.getElementById("pnulo").innerText = "Null: " + typeof vNull; 
+            document.getElementById("pobjeto").innerText = "Object: " + typeof vObject;
+            document.getElementById("parray").innerText = "Array: " + typeof vArray; 
+            var op1 = vString + vNumber;
+            var op2 = vBoolean * vNumber;
+            var op3 = vNumber + vNull;
+            var op4 = vString + vBoolean;
+            console.log("string + number:", op1);
+            console.log("boolean * number:", op2);
+            console.log("number + null:", op3);
+            console.log("string + boolean:", op4);
+            document.getElementById("p-op1").innerText = "Operação 1 ('Olá' + 10): Resultado = " + op1 + " -> O JavaScript converte o número em string e concatena os dois textos.";
+            document.getElementById("p-op2").innerText = "Operação 2 (true * 10): Resultado = " + op2 + " -> O valor booleano 'true' é convertido para o número 1 antes da multiplicação.";
+            document.getElementById("p-op3").innerText = "Operação 3 (10 + null): Resultado = " + op3 + " -> O valor 'null' é convertido para o número 0 na operação matemática.";
+            document.getElementById("p-op4").innerText = "Operação 4 ('Olá' + true): Resultado = " + op4 + " -> O booleano 'true' é convertido em texto e juntado com a string.";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR" id="html-root">
+<head id="head-section">
+    <meta charset="UTF-8" id="meta-charset">
+    <title id="page-title">O que é JavaScript?</title>
+</head>
+<body id="body-section">
+
+    <h1 id="main-heading">O que é JavaScript?</h1>
+
+    <p id="js-motivation">
+        O JavaScript foi criado com a motivação de tornar as páginas web interativas, permitindo que elementos visuais mudassem e reagissem às ações do usuário sem a necessidade de recarregar a página inteira.
+    </p>
+
+    <p id="js-execution">
+        A diferença de execução é que, no navegador, o JavaScript roda do lado do cliente para manipular a interface e a experiência do usuário. Já no servidor, o JavaScript roda nos bastidores processando dados, acessando bancos de dados e respondendo a requisições de rede.
+    </p>
+
+    <p id="js-sandbox">
+        O conceito de sandbox no navegador é uma barreira de segurança que isola a execução do código JavaScript, impedindo que ele acesse arquivos locais do computador do usuário ou danifique o sistema operacional.
+    </p>
+
+    <p id="js-objects">
+        Os objetos globais fornecem funcionalidades prontas: o 'document' permite acessar e modificar a estrutura do HTML, o 'console' serve para enviar mensagens de depuração no terminal do navegador, e o 'alert' exibe uma caixa de diálogo de aviso na tela do usuário.
+    </p>
+
+    <p id="current-time">A hora atual é: </p>
+
+    <script id="main-script">
+        console.log("Mensagem registrada no console.");
+        alert("Olá! Seja bem-vindo à página.");
+        document.getElementById("current-time").innerHTML = "A hora atual é: " + new Date().toLocaleTimeString();
+    </script>
+
+</body>
+</html>

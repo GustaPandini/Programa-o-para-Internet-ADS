@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR" id="html-root">
+<head id="head-section">
+    <meta charset="UTF-8" id="meta-charset">
+    <title id="page-title">Cálculo de IMC</title>
+</head>
+<body id="body-section">
+
+    <h1 id="main-title">Controle de Saúde - IMC</h1>
+
+    <label for="nome" id="lbl-nome">Nome:</label>
+    <input type="text" id="nome"><br><br>
+
+    <label for="peso" id="lbl-peso">Peso (kg):</label>
+    <input type="number" id="peso" step="0.1"><br><br>
+
+    <label for="altura" id="lbl-altura">Altura (m):</label>
+    <input type="number" id="altura" step="0.01"><br><br>
+
+    <button id="btn-calcular" onclick="calcularIMC()">Calcular</button>
+
+    <p id="resultadoIMC"></p>
+    <p id="classificacao"></p>
+    <img id="imgPerfil" src="" alt="Perfil de saúde">
+
+    <script id="main-script">
+        function calcularIMC() {
+            var nome = document.getElementById("nome").value;
+            var pesoTexto = document.getElementById("peso").value;
+            var alturaTexto = document.getElementById("altura").value;
+
+            if (nome === "" || pesoTexto === "" || alturaTexto === "") {
+                alert("Por favor, preencha todos os campos.");
+                return;
+            }
+
+            var peso = parseFloat(pesoTexto);
+            var altura = parseFloat(alturaTexto);
+
+            var imc = peso / (altura * altura);
+            document.getElementById("resultadoIMC").innerText = "IMC: " + imc.toFixed(2);
+
+            var classe = "";
+
+            if (imc < 18.5) {
+                classe = "Abaixo do peso";
+            } else if (imc >= 18.5 && imc < 24.9) {
+                classe = "Peso normal";
+            } else if (imc >= 25 && imc < 29.9) {
+                classe = "Sobrepeso";
+            } else if (imc >= 30 && imc < 34.9) {
+                classe = "Obesidade grau 1";
+            } else if (imc >= 35 && imc < 39.9) {
+                classe = "Obesidade grau 2";
+            } else if (imc >= 40) {
+                classe = "Obesidade grau 3 (mórbida)";
+            }
+
+            document.getElementById("classificacao").innerText = "Classificação: " + classe;
+
+            var faixa = Math.floor(imc);
+
+            switch (true) {
+                case (faixa < 18):
+                    document.getElementById("imgPerfil").src = "./imgs/abaixo.png";
+                    break;
+                case (faixa >= 18 && faixa < 25):
+                    document.getElementById("imgPerfil").src = "./imgs/normal.png";
+                    break;
+                case (faixa >= 25 && faixa < 30):
+                    document.getElementById("imgPerfil").src = "./imgs/sobrepeso.png";
+                    break;
+                case (faixa >= 30 && faixa < 35):
+                    document.getElementById("imgPerfil").src = "./imgs/obesidade1.png";
+                    break;
+                case (faixa >= 35 && faixa < 40):
+                    document.getElementById("imgPerfil").src = "./imgs/obesidade2.png";
+                    break;
+                default:
+                    document.getElementById("imgPerfil").src = "./imgs/obesidade3.png";
+                    break;
+            }
+        }
+    </script>
+
+</body>
+</html>

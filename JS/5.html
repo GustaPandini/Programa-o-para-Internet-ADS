@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR" id="html-root">
+<head id="head-section">
+    <meta charset="UTF-8" id="meta-charset">
+    <title id="page-title">Números Primos</title>
+</head>
+<body id="body-section">
+
+    <label for="inicio" id="label-inicio">Início:</label>
+    <input type="number" id="inicio"><br><br>
+
+    <label for="fim" id="label-fim">Fim:</label>
+    <input type="number" id="fim"><br><br>
+
+    <button id="btn-verificar" onclick="verificarPrimos()">Verificar</button>
+
+    <br><br>
+    <div id="resultadoPrimos"></div>
+
+    <script id="script-primos">
+        function verificarPrimos() {
+            var inicio = parseInt(document.getElementById("inicio").value);
+            var fim = parseInt(document.getElementById("fim").value);
+            var divResultado = document.getElementById("resultadoPrimos");
+            
+            if (isNaN(inicio) || isNaN(fim) || inicio > fim) {
+                divResultado.innerText = "Intervalo inválido.";
+                return;
+            }
+
+            var primosEncontrados = [];
+
+            for (var numero = inicio; numero <= fim; numero++) {
+                if (verificarSeEhPrimo(numero) === true) {
+                    primosEncontrados.push(numero);
+                }
+            }
+
+            if (primosEncontrados.length > 0) {
+                divResultado.innerText = "Números primos: " + primosEncontrados.join(", ");
+            } else {
+                divResultado.innerText = "Nenhum número primo encontrado neste intervalo.";
+            }
+        }
+
+        function verificarSeEhPrimo(num) {
+            if (num < 2) {
+                return false;
+            }
+            
+            for (var i = 2; i < num; i++) {
+                if (num % i === 0) {
+                    return false;
+                }
+            }
+            
+            return true;
+        }
+    </script>
+
+</body>
+</html>

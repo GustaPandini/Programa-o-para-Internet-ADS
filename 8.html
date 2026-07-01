@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR" id="html-root">
+<head id="head-section">
+    <meta charset="UTF-8" id="meta-charset">
+    <title id="page-title">Mudar Cores com Espaço</title>
+    <style id="main-style">
+        body {
+            text-align: center;
+            padding: 50px;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s;
+        }
+        #caixa-conteudo {
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid #000;
+            display: inline-block;
+            transition: background-color 0.3s, color 0.3s;
+        }
+    </style>
+</head>
+<body id="body-section">
+
+    <div id="caixa-conteudo">
+        <h1 id="main-title">Pressione a tecla Espaço</h1>
+        <p id="main-text">As cores do fundo e desta caixa vão mudar!</p>
+    </div>
+
+    <script id="main-script">
+        function gerarCorAleatoria() {
+            var r = Math.floor(Math.random() * 256);
+            var g = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            return "rgb(" + r + ", " + g + ", " + b + ")";
+        }
+
+        document.addEventListener("keydown", function(evento) {
+            if (evento.code === "Space") {
+                evento.preventDefault(); 
+                
+                var corFundo = gerarCorAleatoria();
+                var corCaixa = gerarCorAleatoria();
+                var corTexto = gerarCorAleatoria();
+
+                document.getElementById("body-section").style.backgroundColor = corFundo;
+                document.getElementById("caixa-conteudo").style.backgroundColor = corCaixa;
+                document.getElementById("caixa-conteudo").style.color = corTexto;
+            }
+        });
+    </script>
+
+</body>
+</html>

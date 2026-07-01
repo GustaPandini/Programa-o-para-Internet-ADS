@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR" id="html-root">
+<head id="head-section">
+    <meta charset="UTF-8" id="meta-charset">
+    <title id="page-title">Cor de Fundo Aleatória</title>
+</head>
+<body id="body-section">
+
+    <h1 id="main-title">Cor de Fundo Aleatória</h1>
+
+    <button id="btn-mudar-cor" onclick="mudarCor()">Mudar Cor</button>
+
+    <script id="main-script">
+        function mudarCor() {
+            var r = Math.floor(Math.random() * 256);
+            var g = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            
+            var cor = "rgb(" + r + ", " + g + ", " + b + ")";
+            
+            document.getElementById("body-section").style.backgroundColor = cor;
+        }
+    </script>
+
+</body>
+</html>
