@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP - Gustavo Pandini</title>
+</head>
+<body>
+
+    <h1>O Protocolo HTTP</h1>
+    
+    <div>
+        <p>O HTTP (Hypertext Transfer Protocol) é o protocolo base da Web. Ele atua como o mensageiro que dita as regras de como os navegadores e os servidores devem se comunicar para trocar arquivos (como HTML, imagens e vídeos).</p>
+    </div>
+
+    <hr>
+
+    <h2>Menu de Navegação</h2>
+    <ul>
+        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="historia.html">História da Web</a></li>
+        <li><a href="curriculo.html">Currículo</a></li>
+        <li><a href="contato.html">Contato</a></li>
+    </ul>
+
+    <hr>
+
+    <h2>A Dinâmica de Cliente e Servidor</h2>
+    <p>A comunicação na Web funciona em um modelo de pergunta e resposta:</p>
+    <ul>
+        <li><strong>Cliente (Navegador):</strong> É o seu computador (Navegador). Ele inicia a conversa fazendo uma <em>Requisição</em> (pedido).</li>
+        <li><strong>Servidor:</strong> É o Computador onde o site está hospedado. Ele processa o pedido e devolve uma <em>Resposta</em>.</li>
+    </ul>
+
+    <hr>
+
+    <h2>Métodos: GET e POST</h2>
+    <p>Quando o cliente faz uma requisição, ele usa "verbos" para dizer o que quer fazer:</p>
+    <ul>
+        <li><strong>GET:</strong> Usado para <em>buscar</em> informações. Quando você digita um site e aperta Enter, está fazendo um GET. Os dados enviados ficam visíveis na URL.</li>
+        <li><strong>POST:</strong> Usado para <em>enviar</em> informações pesadas ou sensíveis ao servidor (como enviar um formulário de login ou senha). Os dados vão ocultos no corpo da requisição.</li>
+    </ul>
+
+    <hr>
+
+    <h2>Exemplos de Comunicação HTTP</h2>
+    
+    <h3>1. Exemplo de Requisição</h3>
+    
+    <h3>1. Exemplo de Requisição</h3>
+    <blockquote>
+        <p>
+            GET /index.html HTTP/1.1<br>
+            Host: www.meusite.com.br<br>
+            User-Agent: Mozilla/5.0<br>
+            Accept-Language: pt-BR
+        </p>
+    </blockquote>
+
+    <h3>2. Exemplo de Resposta</h3>
+    <blockquote>
+        <p>
+            HTTP/1.1 200 OK<br>
+            Date: Mon, 29 Jun 2026 12:00:00 GMT<br>
+            Content-Type: text/html<br>
+            <br>
+            &lt;html&gt;<br>
+            &nbsp;&nbsp;&lt;body&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Bem-vindo!&lt;/h1&gt;<br>
+            &nbsp;&nbsp;&lt;/body&gt;<br>
+            &lt;/html&gt;
+        </p>
+    </blockquote>
+
+    <hr>
+
+    <h2>Códigos de Status HTTP</h2>
+    <p>O servidor sempre responde com um número de 3 dígitos (status code) para avisar o que aconteceu com o pedido:</p>
+    <ul>
+        <li><strong>200 (OK):</strong> Sucesso! A requisição foi recebida e a página foi encontrada.</li>
+        <li><strong>301 (Moved Permanently):</strong> O site ou página mudou de endereço definitivamente. O servidor redireciona o cliente para o novo link.</li>
+        <li><strong>400 (Bad Request):</strong> Erro do cliente. A requisição foi malformada ou o servidor não conseguiu entendê-la.</li>
+        <li><strong>403 (Forbidden):</strong> Proibido. A página existe, mas você não tem permissão para acessá-la.</li>
+        <li><strong>404 (Not Found):</strong> Não encontrado. A clássica página de erro quando o link não existe ou foi apagado.</li>
+        <li><strong>500 (Internal Server Error):</strong> Erro no servidor. O cliente fez tudo certo, mas o servidor "crashou" ao tentar processar.</li>
+    </ul>
+
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>   
+   <title>Exemplo especificidade de seletores</title>
+   <style>
+      /*regra 1*/ li{color:red;}
+      /*regra 2*/ .churras{color:green;}
+      /*regra 3*/ .fruta{color:gray}
+      /*regra 4*/ li+li.churras{color: black;}
+      /*regra 5*/ .churras[draggable="true"]{color: magenta;}
+      /*regra 6*/ #lip1,#lip2,#lip3{color:blue}
+      /*regra 7*/ #lip3.fruta{color:orange}
+      /*regra 8*/ ol>li.churras#lip5{color:purple}
+   </style>
+</head>
+<body>   
+   <ol>
+   <!--item 1--> <li id="lip0">Abacaxi</li> <!--O único seletor que consegue alcançá-lo é a Regra 1-->
+   <!--item 2--> <li           class="fruta">Melão</li> <!--Ele é alvo da Regra 1, e da Regra 3, mas a Regra número 3 é mais especifica.-->
+   <!--item 3--> <li id="lip2" class="fruta">Pera</li> <!--Ele tem a classe .fruta, mas também tem um ID. A Regra 6 busca diretamente por esse ID-->
+   <!--item 4--> <li id="lip3" class="fruta">Uva</li> <!--Empata no ID com a Regra 6, mas ganha porque é mais detalhada-->
+   <!--item 5--> <li id="lip4" class="fruta">Maçã</li> <!--O ID desse item não está nas regras. Sobra a classe, que ganha da tag pura-->
+   <!--item 6--> <li           class="churras">Carne</li> <!--Seletor de classe ganha de seletor de tag pura-->
+   <!--item 7--> <li           class="churras">Linguiça</li> <!--Ganha da Regra 2 por ser um seletor mais complexo e específico-->
+   <!--item 8--> <li id="lip7" class="churras" draggable="true">Pão de alho</li> <!--Ganha das outras porque junta Classe mais o Atributo, tornando-se a regra mais específica-->
+   </ol>   
+</body>
+</html>

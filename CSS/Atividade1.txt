@@ -1,0 +1,3 @@
+Uma regra CSS é a estrutura básica que usamos para definir o estilo de um ou mais elementos em uma página web. Ela funciona como uma instrução para o navegador, dizendo exatamente quem deve ser modificado e o que deve ser alterado nele.
+
+Uma regra é dividida em duas partes principais: o seletor e o bloco de declaração que fica entre chaves { } e contém as propriedades e valores.

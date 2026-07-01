@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+    body { font-family: Arial; background-color: #f0f0f0; }
+    .chat-container {
+        width: 300px;
+        height: 400px;
+        background: white;
+        margin: 20px auto;
+        position: relative;
+        border: 1px solid #ccc;
+        padding: 10px;
+        overflow-y: scroll;
+    }
+    .mensagem {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        width: 70%;
+        clear: both;
+    }
+    .recebida {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        float: left;
+    }
+    .enviada {
+        background-color: #dcf8c6;
+        float: right;
+    }
+    .input-area {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #eee;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    input[type="text"] { width: 70%; }
+</style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="mensagem recebida">Olá, tudo bem? [cite: 76]</div>
+        <div class="mensagem enviada">Estou bem sim, e você? [cite: 78]</div>
+        <div class="mensagem recebida">Vamos sair hoje? [cite: 80]</div>
+        
+        <div class="input-area">
+            <input type="text" placeholder="Digite sua mensagem [cite: 82]">
+            <button>Enviar [cite: 84]</button>
+        </div>
+    </div>
+</body>
+</html>

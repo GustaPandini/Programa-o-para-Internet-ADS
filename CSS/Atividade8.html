@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+    .bandeira {
+        width: 300px;
+        height: 200px;
+        border: 1px solid #000;
+        margin-bottom: 30px;
+        position: relative;
+    }
+    
+    #japao { background-color: white; display: flex; justify-content: center; align-items: center; }
+    #japao .circulo { width: 120px; height: 120px; background-color: red; border-radius: 50%; }
+
+    #alemanha div { height: 33.33%; }
+    #alemanha .preto { background-color: black; }
+    #alemanha .vermelho { background-color: red; }
+    #alemanha .amarelo { background-color: yellow; }
+
+    #holanda div { height: 33.33%; }
+    #holanda .vermelho { background-color: red; }
+    #holanda .branco { background-color: white; }
+    #holanda .azul { background-color: blue; }
+
+    #italia div { width: 33.33%; height: 100%; float: left; }
+    #italia .verde { background-color: green; }
+    #italia .branco { background-color: white; }
+    #italia .vermelho { background-color: red; }
+
+    #brasil { background-color: green; display: flex; justify-content: center; align-items: center; position: relative; }
+    #brasil .losango { width: 150px; height: 150px; background-color: yellow; transform: rotate(45deg); position: absolute; }
+    #brasil .circulo { width: 90px; height: 90px; background-color: blue; border-radius: 50%; position: absolute; }
+</style>
+</head>
+<body>
+    <nav>
+        <a href="#japao">Bandeira Japão [cite: 96]</a> |
+        <a href="#alemanha">Bandeira Alemanha</a> |
+        <a href="#holanda">Bandeira Holanda</a> |
+        <a href="#italia">Bandeira Itália</a> |
+        <a href="#brasil">Bandeira Brasil</a>
+    </nav>
+
+    <h2 id="japao">Japão</h2>
+    <div class="bandeira" id="japao">
+        <div class="circulo"></div>
+    </div>
+
+    <h2 id="alemanha">Alemanha</h2>
+    <div class="bandeira" id="alemanha">
+        <div class="preto"></div>
+        <div class="vermelho"></div>
+        <div class="amarelo"></div>
+    </div>
+
+    <h2 id="holanda">Holanda</h2>
+    <div class="bandeira" id="holanda">
+        <div class="vermelho"></div>
+        <div class="branco"></div>
+        <div class="azul"></div>
+    </div>
+
+    <h2 id="italia">Itália</h2>
+    <div class="bandeira" id="italia">
+        <div class="verde"></div>
+        <div class="branco"></div>
+        <div class="vermelho"></div>
+    </div>
+
+    <h2 id="brasil">Brasil</h2>
+    <div class="bandeira" id="brasil">
+        <div class="losango"></div>
+        <div class="circulo"></div>
+    </div>
+</body>
+</html>
