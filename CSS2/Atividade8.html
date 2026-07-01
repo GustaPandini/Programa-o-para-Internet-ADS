@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+    body {
+        margin: 20px;
+        background-color: #f0f0f0;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 15px;
+    }
+    .coluna {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .caixa {
+        border-radius: 5px;
+    }
+    
+    .verde { background-color: #a3c280; height: 120px; }
+    .laranja-grande { background-color: #f3a34a; height: 250px; }
+    .laranja-pequeno { background-color: #f3a34a; height: 150px; }
+    .rosa { background-color: #e6a7a5; height: 150px; }
+    
+    .pontos {
+        display: flex;
+        gap: 10px;
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+    }
+    .ponto {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #b9d3e8;
+    }
+
+    @media screen and (max-width: 500px) {
+        .container {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="coluna">
+            <div class="caixa verde"></div>
+            <div class="caixa laranja-grande"></div>
+        </div>
+        <div class="coluna">
+            <div class="caixa laranja-pequeno"></div>
+            <div class="pontos">
+                <div class="ponto"></div>
+                <div class="ponto"></div>
+                <div class="ponto"></div>
+                <div class="ponto"></div>
+            </div>
+            <div class="caixa rosa"></div>
+        </div>
+    </div>
+</body>
+</html>

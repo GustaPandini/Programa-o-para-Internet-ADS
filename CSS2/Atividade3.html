@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+    body {
+        margin: 20px;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        font-size: 24px;
+        text-align: center;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 15px;
+        grid-template-areas:
+            "area1 area1 area1"
+            "area2 area3 area4"
+            "area5 area3 area6"
+            "area5 area7 area7";
+    }
+    .item {
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 0;
+    }
+    
+    .i1 { grid-area: area1; background-color: #ffd072; }
+    .i2 { grid-area: area2; background-color: #f3556c; color: white; }
+    .i3 { grid-area: area3; background-color: #ffd072; }
+    .i4 { grid-area: area4; background-color: #f3556c; color: white; }
+    .i5 { grid-area: area5; background-color: #ffd072; }
+    .i6 { grid-area: area6; background-color: #f3556c; color: white; }
+    .i7 { grid-area: area7; background-color: #ffd072; }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="item i1">1</div>
+        <div class="item i2">2</div>
+        <div class="item i3">3</div>
+        <div class="item i4">4</div>
+        <div class="item i5">5</div>
+        <div class="item i6">6</div>
+        <div class="item i7">7</div>
+    </div>
+</body>
+</html>
