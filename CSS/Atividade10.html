@@ -7,28 +7,28 @@
     .ceu {
         width: 100%;
         height: 100vh;
-        background: linear-gradient(to bottom, #87CEEB, #ffffff); /* [cite: 154] */
-        position: relative; /* [cite: 152] */
+        background: linear-gradient(to bottom, #87CEEB, #ffffff);
+        position: relative;
         overflow: hidden;
     }
     .nuvem {
         width: 150px;
         height: 50px;
         background-color: white;
-        border-radius: 50px; /* [cite: 149] */
-        box-shadow: 10px 10px 5px rgba(0,0,0,0.1); /* [cite: 149] */
+        border-radius: 50px; 
+        box-shadow: 10px 10px 5px rgba(0,0,0,0.1);
         position: absolute;
         top: 50px;
-        animation: moverNuvem 15s linear infinite; /* [cite: 150] */
+        animation: moverNuvem 15s linear infinite;
     }
     .barco {
         width: 100px;
         height: 100px;
-        background-color: brown; /* Substitua por background-image  */
+        background-color: brown;
         position: absolute;
         bottom: 80px;
-        z-index: 2; /* [cite: 153] */
-        animation: moverBarco 10s linear infinite, balancar 2s ease-in-out infinite alternate; /* [cite: 145] */
+        z-index: 2; 
+        animation: moverBarco 10s linear infinite, balancar 2s ease-in-out infinite alternate;
     }
     .mar {
         width: 100%;
@@ -36,9 +36,9 @@
         background-color: #1E90FF;
         position: absolute;
         bottom: 0;
-        z-index: 3; /* [cite: 153] */
+        z-index: 3;
     }
-    .mar::before { /* [cite: 147] */
+    .mar::before {
         content: '';
         position: absolute;
         top: -20px;

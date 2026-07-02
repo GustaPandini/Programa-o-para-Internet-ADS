@@ -57,29 +57,6 @@
             }
 
             document.getElementById("classificacao").innerText = "Classificação: " + classe;
-
-            var faixa = Math.floor(imc);
-
-            switch (true) {
-                case (faixa < 18):
-                    document.getElementById("imgPerfil").src = "./imgs/abaixo.png";
-                    break;
-                case (faixa >= 18 && faixa < 25):
-                    document.getElementById("imgPerfil").src = "./imgs/normal.png";
-                    break;
-                case (faixa >= 25 && faixa < 30):
-                    document.getElementById("imgPerfil").src = "./imgs/sobrepeso.png";
-                    break;
-                case (faixa >= 30 && faixa < 35):
-                    document.getElementById("imgPerfil").src = "./imgs/obesidade1.png";
-                    break;
-                case (faixa >= 35 && faixa < 40):
-                    document.getElementById("imgPerfil").src = "./imgs/obesidade2.png";
-                    break;
-                default:
-                    document.getElementById("imgPerfil").src = "./imgs/obesidade3.png";
-                    break;
-            }
         }
     </script>
 
